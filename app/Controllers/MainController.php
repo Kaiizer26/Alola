@@ -41,4 +41,26 @@ class MainController extends CoreController
         // Affiche la vue dans le dossier views
         $this->show('mentions');
     }
+
+    public function register()
+    {
+        // Affiche la vue dans le dossier views
+        $this->show('register');
+    }
+    public function login()
+    {
+        // Affiche la vue dans le dossier views
+        $this->show('login');
+    }
+
+    public function explore()
+    {
+        // Affiche la vue dans le dossier views
+        $this->show('explore');
+    }
+    public function order()
+    {
+        // Affiche la vue dans le dossier views
+        $this->show('order');
+    }
 }

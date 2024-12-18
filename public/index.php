@@ -22,6 +22,22 @@ $router->addRoutes(array(
         'controller' => MainController::class, // Dans quel controller ?
         'action' => 'home' // Quelle méthode dans ce controller ?
     ], 'home'),
+    array('GET','/register', [
+        'controller' => MainController::class, // Dans quel controller ?
+        'action' => 'register' // Quelle méthode dans ce controller ?
+    ], 'register'),
+    array('GET','/login', [
+        'controller' => MainController::class, // Dans quel controller ?
+        'action' => 'login' // Quelle méthode dans ce controller ?
+    ], 'login'),
+    array('GET','/order', [
+        'controller' => MainController::class, // Dans quel controller ?
+        'action' => 'order' // Quelle méthode dans ce controller ?
+    ], 'order'),
+    array('GET','/explore', [
+        'controller' => MainController::class, // Dans quel controller ?
+        'action' => 'explore' // Quelle méthode dans ce controller ?
+    ], 'explore'),
     array('GET','/mentions-legales', [
         'controller' => MainController::class, // le namespace nom de la classe + le nom de la classe (concatenation) 
         'action' => 'legalMentions'
