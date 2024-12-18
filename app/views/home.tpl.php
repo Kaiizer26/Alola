@@ -2,16 +2,19 @@
             <!-- Hero banner -->
             <section class="first-page">
                 <section class="hero-banner">
-                    <article>
-                        <h2>Titre à longueur moyenne</h2>
-                        <p>Je décris le processus en une ou deux phrases courtes et simples à comprendre.</p>
-                        <section>
-                            <a href="" id="herobanner-btn">Voir le produit</a>
-                            <p>5000 personnes comme vous ont déjà acheté ce produit ! <i class="fa-solid fa-arrow-right-long"></i></p>
+                    <article class="text-content">
+                        <section class="txt-1">
+                            <article class="slide-txt">
+                                <div class="">Équipez</div>
+                                <div class="">Jouez</div>
+                                <div class="">Smash</div>
+                                <div class="">Gagnez</div>
+                            </article> 
+                            
+                            <h1>design </br> made it easy</h1>
+                            <button class="btn1">Découvrir les produits <i class="fa-solid fa-arrow-right-long"></i></button>
                         </section>
-                    </article>
-                    <article>
-                        <img src="assets/images/woman-playing-volleyball-beach.jpg" alt="image du produit">
+                        <section class="txt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque iste sequi assumenda.</section>
                     </article>
                 </section>
                 <!-- Fonctionnalités -->

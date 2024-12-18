@@ -8,6 +8,16 @@
     font-family: 'm-light';
     src: url(../fonts/MundialThin.otf);
 }
+
+:root{
+    --huge: 6.5rem;
+    --x-large: 4rem;
+    --large: 2.5rem;
+    --medium: 2rem;
+    --small: 1.5rem;
+    --x-small: 1.1rem;
+    --tiny: 0.8rem;
+}
 body{
     margin: 0;
     padding: 0;
@@ -127,12 +137,34 @@ ul li:hover .menu-type{
 }
 
 /* ------ */
+/*
 .svg-bg{
     position: absolute;
     top: -1.5rem;
     right: -15rem;
     z-index: -5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.svg-bg svg{
+    height: 100%;
+}
+*/
+
+.svg-bg {
+    
+}
+.svg-bg img {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 200vw;
+    z-index: -10;
+}
+
+
 
 #login {background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%)}
 #login {
@@ -172,28 +204,80 @@ ul li:hover .menu-type{
     background-position: right center; /* change the direction of the change here */
     color: #fff;
     text-decoration: none;
-  }
+}
  
-
 main{
-    margin: 0 5em;
+      margin: 0 10px;
 }
-main section.first-page{
-    padding-top: 10%;
+main section.first-page{        
+        background-image: radial-gradient(circle, #fff 2px, rgba(0, 0, 0, 0) 2px);
+        background-size: 100px 100px;
+}
+    
+    /*Le nouveau */
+main .btn1{
+        background: transparent;
+        border: solid red;
+        color: white;
+        align-items: center;
+        font-weight: bold;
+        cursor: pointer;
+}
+main i{
+        align-items: center;
+        margin-left: .5rem;
+        font-size: var(--tiny);
+}
+
+
+.text-content{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    /* border: solid red; */
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    border: solid purple;
+}
+.txt-1{
+}
+.txt-1 h1{
+    font-size: var(--huge);
+    font-weight: normal;
+    text-align: right;
+    background-image: linear-gradient(120deg, #fac384, white);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border: solid red;
+    height: 10%;
+}
+.txt-1 h2{
+    height: 10%;
+}
+.txt-1 button{
+    text-align: right;
+    height: 35px;
+
+}
+.txt-1 .slide-txt{
+    text-align: right;
+    
+}
+.txt-2{
+    width: 300px;
+    align-self: flex-end;
+    font-size: var(--small);
+    line-height: 1.4;
 }
 
+/* ----- */
 
+/*
 main section.first-page .hero-banner{
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
 }
 main section.first-page .hero-banner article{
-    /* border: solid brown; */
+    
     width: 40%;
 }
 main section.first-page .hero-banner article h2{
@@ -209,13 +293,11 @@ main section.first-page .hero-banner article section{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: solid green; */
 }
 main section.first-page .hero-banner article section input{
     padding: 2% 5%;
 }
 main section.first-page .hero-banner article section p{
-    /* border: solid red; */
     width: 65%;
 }
 #herobanner-btn {background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%)}
@@ -230,11 +312,10 @@ main section.first-page .hero-banner article section p{
    color: white;            
    box-shadow: 0 0 1px #eee;
    border-radius: 5px;
-   /* display: block; */
  }
 
  #herobanner-btn:hover {
-   background-position: right center; /* change the direction of the change here */
+   background-position: right center; 
    color: #fff;
    text-decoration: none;
  }
@@ -245,6 +326,9 @@ main section.first-page .hero-banner article section p{
     box-shadow: 0 0 5px #454343;
     border-radius: 10px;
 }
+
+
+*/
 /* Features */
 main section.first-page .features{
     display: flex;
