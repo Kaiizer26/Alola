@@ -5,16 +5,16 @@
                     <section class="txt-1">
                         <article class="slide-txt">
                             <div class="">Équipez</div>
-                            <div class="">Jouez</div>
-                            <div class="">Smash</div>
+                            <div class="">Sautez</div>
+                            <div class="">Frappez</div>
                             <div class="">Gagnez</div>
                         </article> 
                             
-                        <h1>design </br> made it easy</h1>
+                        <h1>Prêt </br> à jouer ?</h1>
                         <button class="btn1">Découvrir les produits <i class="fa-solid fa-arrow-right-long"></i></button>
                     </section>
                     <section class="txt-2">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque iste sequi assumenda.
+                    Commencez dès maintenant à parcourir notre catalogue et trouvez l’équipement parfait pour votre prochain smash !
                     </section>                
                 </section>
                 <!-- Fonctionnalités -->

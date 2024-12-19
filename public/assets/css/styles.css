@@ -137,21 +137,17 @@ ul li:hover .menu-type{
 }
 
 /* ------ */
-/*
+
 .svg-bg{
     position: absolute;
     top: -1.5rem;
-    right: -15rem;
+    right: -20rem;
     z-index: -5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
-.svg-bg svg{
-    height: 100%;
-}
-*/
 
+
+/*
 .svg-bg {
     
 }
@@ -163,7 +159,7 @@ ul li:hover .menu-type{
     height: 200vw;
     z-index: -10;
 }
-
+*/
 
 
 #login {background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%)}
@@ -284,10 +280,12 @@ main i{
     
 }
 .txt-2{
-    width: 300px;
+    margin-right: 5em;
+    width: 400px;
     align-self: flex-end;
     font-size: var(--small);
     line-height: 1.4;
+
 }
 
 /* ----- */
