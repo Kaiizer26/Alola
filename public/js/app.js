@@ -1,3 +1,16 @@
+let timeline= gsap.timeline({repeat: -1});
+
+gsap.utils.toArray(".slide-txt div").forEach((text, index)=>{
+  timeline.to(text, {
+      top: 0,
+      duration: 1,
+      delay: -1,
+    });
+    if(index !== 3){
+    timeline.to(text, { top: "-9rem", duration: 1});
+    }
+});
+
 let svg= document.querySelector(".svg-bg");
 let path= svg.querySelector("path");
 const pathLength = path.getTotalLength();

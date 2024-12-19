@@ -230,14 +230,19 @@ main i{
 }
 
 
-.text-content{
+.hero-banner{
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    height: 100%;
-    border: solid purple;
+    height: 100vh;
+
 }
 .txt-1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    
 }
 .txt-1 h1{
     font-size: var(--huge);
@@ -246,12 +251,10 @@ main i{
     background-image: linear-gradient(120deg, #fac384, white);
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    border: solid red;
-    height: 10%;
+    padding: 0;
+    margin: 0;
 }
-.txt-1 h2{
-    height: 10%;
-}
+
 .txt-1 button{
     text-align: right;
     height: 35px;
@@ -259,6 +262,21 @@ main i{
 }
 .txt-1 .slide-txt{
     text-align: right;
+}
+
+.slide-txt{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    height: 8rem;
+    min-width: 500px;
+    overflow: hidden;
+    text-align: right;
+}
+.slide-txt div{
+    font-size: var(--huge);
+    position: absolute;
+    top: 100%;
     
 }
 .txt-2{
