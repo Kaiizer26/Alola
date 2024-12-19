@@ -216,12 +216,16 @@ main section.first-page{
     
     /*Le nouveau */
 main .btn1{
-        background: transparent;
-        border: solid red;
-        color: white;
-        align-items: center;
-        font-weight: bold;
-        cursor: pointer;
+    margin-top: 1em ;
+    background: transparent;
+    border: none;
+    font-size: var(--small);
+    font-weight: bold;
+    color: white;
+    border-radius: 9px;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
 }
 main i{
         align-items: center;
