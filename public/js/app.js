@@ -44,3 +44,11 @@ const app = {
 };
 
 document.addEventListener('DOMContentLoaded', app.init);
+
+const btns= document.querySelectorAll('.q-a-container');
+btns.forEach((btn, index) => {
+  // console.log(btn);
+  btn.addEventListener("click", () =>{
+    btn.classList.toggle("active");
+  })
+});
