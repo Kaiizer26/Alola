@@ -1,7 +1,8 @@
 <main class="product-main">
+      <?php $product = $viewData['product'] ?>
       <section class="product-img">
         <article class="img-main">
-          <img src="assets/images/produits/1-kiss.jpg" alt="main" />
+          <img src="<?= $baseRoute . '/' . $product->getPicture()?>" alt="main" />
         </article>
         <article class="img-group">
           <div class="">
@@ -16,8 +17,8 @@
         </article>
       </section>
       <section class="product-details">
-        <h1>Nom article</h1>
-        <h3>139.00€</h3>
+        <h1><?= $product->getName() ?></h1>
+        <h3><?= $product->getPrice() ?>€</h3>
         <select name="taille" id="taille">
           <option value="">Choisir la taille</option>
           <option value="xs">XS</option>

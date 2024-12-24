@@ -19,7 +19,7 @@
                     <article class="stars">
                         <span class="fa fa-star checked"></span>
                     </article>
-                    <a href="/product">Ajouter au panier</a>
+                    <a href="/catalogue/product<?= $product->getId()?>">Ajouter au panier</a>
                 </section>
             </article>
             <?php endforeach ?>

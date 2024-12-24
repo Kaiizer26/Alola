@@ -67,7 +67,7 @@ class MainController extends CoreController
     public function productList(){
         $productModel = new Product();
         $products = $productModel->findAll();
-        //dump($products);
+        dump($products);
         $this->show('product_list', [
             'products' => $products
         ]); 
