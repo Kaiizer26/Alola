@@ -38,6 +38,11 @@ $router->addRoutes(array(
         'controller' => MainController::class, // Dans quel controller ?
         'action' => 'explore' // Quelle méthode dans ce controller ?
     ], 'explore'),
+    array('GET','/products', [
+        'controller' => MainController::class,
+        'action' => 'productList'
+    ], 'product_list'),
+    // Pas essayé
     array('GET','/mentions-legales', [
         'controller' => MainController::class, // le namespace nom de la classe + le nom de la classe (concatenation) 
         'action' => 'legalMentions'
@@ -54,7 +59,7 @@ $router->addRoutes(array(
         'controller' => CatalogController::class,
         'action' => 'brand'
     ], 'catalog-brand'),
-    array('GET','/catalogue/produit/[i:id]', [
+    array('GET','/catalogue/product[i:id]', [
         'controller' => CatalogController::class,
         'action' => 'product'
     ], 'catalog-product'),
@@ -62,7 +67,7 @@ $router->addRoutes(array(
         'controller' => MainController::class,
         'action' => 'test'
     ])
-  ));
+));
 
 // Ici on check si la route sur laquelle on est a bien été mappé
 // doc : https://altorouter.com/usage/matching-requests.html

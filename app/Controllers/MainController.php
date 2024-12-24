@@ -63,4 +63,14 @@ class MainController extends CoreController
         // Affiche la vue dans le dossier views
         $this->show('order');
     }
+    
+    public function productList(){
+        $productModel = new Product();
+        $products = $productModel->findAll();
+        //dump($products);
+        $this->show('product_list', [
+            'products' => $products
+        ]); 
+    }
+    
 }

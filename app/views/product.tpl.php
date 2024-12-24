@@ -1,55 +1,40 @@
-<h1>Product numero <?=$viewData['productId']?></h1>
-<section class="hero">
-    <div class="container">
-      <!-- Breadcrumbs -->
-      <ol class="breadcrumb justify-content-center">
-        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-        <li class="breadcrumb-item active">Détente</li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="products-grid">
-    <div class="container-fluid">
-
-      <div class="row">
-        <!-- product-->
-        <div class="col-lg-6 col-sm-12">
-          <div class="product-image">
-            <a href="detail.html" class="product-hover-overlay-link">
-              <img src="<?=$absoluteURL.'/'.$viewData['product']->getPicture()?>" alt="product" class="img-fluid">
-            </a>
+<main class="product-main">
+      <section class="product-img">
+        <article class="img-main">
+          <img src="assets/images/produits/1-kiss.jpg" alt="main" />
+        </article>
+        <article class="img-group">
+          <div class="">
+            <img src="assets/images/produits/10-jack.jpg" alt="" />
           </div>
-        </div>
-        <div class="col-lg-6 col-sm-12">
-          <div class="mb-3">
-            <h3 class="h3 text-uppercase mb-1"><?=$viewData['product']->getName()?></h3>
-            <div class="text-muted">by <em>BOOTstrap</em></div>
-            <div>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star-o"></i>
-            </div>
+          <div class="">
+            <img src="assets/images/produits/10-jack.jpg" alt="" />
           </div>
-          <div class="my-2">
-            <div class="text-muted"><span class="h4"><?=$viewData['product']->getPrice()?> €</span> TTC</div>
+          <div class="">
+            <img src="assets/images/produits/10-jack.jpg" alt="" />
           </div>
-          <div class="product-action-buttons">
-            <form action="cart.html" method="post">
-              <input type="hidden" name="product_id" value="1">
-              <button class="btn btn-dark btn-buy"><i class="fa fa-shopping-cart"></i><span class="btn-buy-label ml-2">Ajouter au panier</span></button>
-            </form>
-          </div>
-          <div class="mt-5">
-            <p>
-            <?=$viewData['product']->getDescription()?>
-            </p>
-          </div>
-        </div>
-        <!-- /product-->
-      </div>
-      
-    </div>
-  </section>
+        </article>
+      </section>
+      <section class="product-details">
+        <h1>Nom article</h1>
+        <h3>139.00€</h3>
+        <select name="taille" id="taille">
+          <option value="">Choisir la taille</option>
+          <option value="xs">XS</option>
+          <option value="s">S</option>
+          <option value="m">M</option>
+          <option value="l">l</option>
+        </select>
+        <article class="quantity-add">
+          <p>1</p>
+          <button>Ajouter au panier</button>
+        </article>
+        <h4>Détails du produit</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
+          saepe quam facere repellendus eius iure eos voluptatum quis sint at
+          quisquam quas deserunt perferendis temporibus tempora porro magni.
+          Sunt doloribus quisquam vel, cum omnis perspiciatis?
+        </p>
+      </section>
+</main>

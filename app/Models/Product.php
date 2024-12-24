@@ -118,7 +118,7 @@ class Product extends CoreModel
         // Je veux récuperer UN objet Product, PDO le fait pour moi => fetchObject (fetch qu'une seule fois + converti en objet de la classe 'Product' donc le model Product)
         $product = $pdoStatement->fetchObject(Product::class);
 
-        return $category;
+        return $product;
     }
 
 
@@ -197,6 +197,10 @@ class Product extends CoreModel
         $this->price = $price;
     }
 
+    public function getRate()
+    {
+        return $this->rate;
+    }
     /**
     * Get the value of status
     */ 
