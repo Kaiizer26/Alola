@@ -16,7 +16,8 @@
                         <h3><?=$product->getPrice() ?></h3>
                     </article>
                     
-                    <a href="/catalogue/produit/<?= $product->getId()?>">Ajouter au panier</a>
+                    <a href="/catalogue/produit/<?= $product->getId()?>">Voir le produit</a>
+                    <a href="/add-to-cart/<?= $product->getId() ?>">Ajouter au panier</a>
                 </section>
             </article>
             <?php endforeach ?>
