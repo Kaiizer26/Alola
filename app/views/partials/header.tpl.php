@@ -25,36 +25,24 @@
                     <ul class="first-ul">
                         <li><a href="/catalogue/categories" class="categorie">Catégories</a>
                             <ul class="menu menu-categorie">
-                                <li><a href="">Ballons</a></li>
-                                <li><a href="">Chaussures</a></li>
-                                <li><a href="">Vêtements</a></li>                            
-                                <li><a href="">Protections</a></li>                            
-                                <li><a href="">Accessoires</a></li>                            
-                                <li><a href="">Sacs</a></li>                            
-                                <li><a href="">Equipement</a></li>                         
+                                <?php foreach ($viewData['categories'] as $category) : ?>
+                                <li><a href="/catalogue/categorie/<?= $category->getId()?>"><?= $category->getName()?></a></li>        
+                                <?php endforeach ?>             
                             </ul>
                         </li>
                         <li><a href="/catalogue/brands" class="marque">Marques</a>
                             <ul class="menu menu-marque">
-                                <li><a href="">Mikasa</a></li>
-                                <li><a href="">Molten</a></li>
-                                <li><a href="">Asics</a></li>                            
-                                <li><a href="">Mizuno</a></li>                            
-                                <li><a href="">Adidas</a></li>                            
-                                <li><a href="">Nike</a></li>                            
+                            <?php foreach ($viewData['brands'] as $brand) : ?>
+                                <li><a href="/catalogue/marque/<?= $brand->getId()?>"><?= $brand->getName()?></a></li>        
+                                <?php endforeach ?>                           
                             </ul> 
                         </li>
                         <li><a href="/catalogue/types" class="type">Type</a>
                             <ul class="menu menu-type">
                                 
-                                <li><a href="">Compétition</a></li>
-                                <li><a href="">Entraînement</a></li>
-                                <li><a href="">Loisir</a></li>                            
-                                <li><a href="">Indoor</a></li>
-                                <li><a href="">Outdoor</a></li>                            
-                                <li><a href="">Hommes</a></li>
-                                <li><a href="">Femmes</a></li>                            
-                                <li><a href="">Enfants</a></li>                            
+                            <?php foreach ($viewData['types'] as $type) : ?>
+                                <li><a href="/catalogue/type/<?= $type->getId()?>"><?= $type->getName()?></a></li>        
+                                <?php endforeach ?>                           
                                  
                             </ul>
                         </li>                        

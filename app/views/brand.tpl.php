@@ -1,6 +1,6 @@
 <main class="explore-main">
         <section class="texte">
-            <h3>Tous les produits de : </h3>
+            <h3>Tous les produits de la marque: <?php $brand = $viewData['brand']?><?= $brand->getName()?></h3>
         </section>
 
         <section class="produits">

@@ -32,6 +32,17 @@ class CoreController
         $categoryModel = new Category();
         // Ci dessous j'execute la methode findAll pour récupérer toutes les categories depuis la bdd
         $categories = $categoryModel->findAll();
+        $viewData['categories'] = $categories;
+
+        $brandModel = new Brand();
+        // Ci dessous j'execute la methode findAll pour récupérer toutes les categories depuis la bdd
+        $brands = $brandModel->findAll();
+        $viewData['brands'] = $brands;
+
+        $typeModel = new Type();
+        // Ci dessous j'execute la methode findAll pour récupérer toutes les categories depuis la bdd
+        $types = $typeModel->findAll();
+        $viewData['types'] = $types;
         // dump($categories);
         // $brandModel = new Brand();
         // // Ci dessous j'execute la methode findAll pour récupérer toutes les categories depuis la bdd

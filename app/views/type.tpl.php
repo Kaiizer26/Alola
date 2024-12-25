@@ -1,6 +1,6 @@
 <main class="explore-main">
         <section class="texte">
-            <h3>Tous les produits de : </h3>
+            <h3><?php $type = $viewData['type']?><?= $type->getName()?></h3>
         </section>
 
         <section class="produits">
