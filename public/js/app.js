@@ -24,14 +24,14 @@ gsap.fromTo(
     strokeDashoffset: pathLength,
   },
   {
-    strokeDashoffset: 0,
+    strokeDashoffset: 1,
     duration: 10,
     ease: "none",
     scrollTrigger: {
       trigger: ".svg-bg",
       start: "top top",
       end: "bottom bottom",
-      scrub: 1,
+      scrub: 8,
     },
   }
 );

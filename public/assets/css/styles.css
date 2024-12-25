@@ -165,17 +165,15 @@ ul li:hover .menu-type{
 /* test */
 
 .svg-bg {
-    /* position: relative; */
-    overflow: hidden; 
     height: auto; 
 }
 
 .svg-bg svg{
     position: absolute;
     top: -1.5rem;
+    max-height: 780vh;
     right: -30rem;
     z-index: -1;
-    max-height: 780vh;
 }
 
 
@@ -225,7 +223,9 @@ ul li:hover .menu-type{
 main{
       margin: 0 10px;
 }
-main section.first-page{        
+
+main section.first-page{    
+           
         background-image: radial-gradient(circle, #fff 2px, rgba(0, 0, 0, 0) 2px);
         background-size: 90px 90px;
         z-index: -15;
