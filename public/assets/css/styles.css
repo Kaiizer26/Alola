@@ -812,6 +812,10 @@ footer #copyright{
 .order{
     margin: 0;
 }
+.order-main img{
+    max-width: 250px;
+    max-height: 250px;
+}
 .order .order-main{
     margin: 1em;
     text-align: center;
