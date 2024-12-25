@@ -67,9 +67,29 @@ class MainController extends CoreController
     public function productList(){
         $productModel = new Product();
         $products = $productModel->findAll();
-        dump($products);
         $this->show('product_list', [
             'products' => $products
+        ]); 
+    }
+    public function categoryList(){
+        $categoryModel = new Category();
+        $categories = $categoryModel->findAll();
+        $this->show('category_list', [
+            'categories' => $categories
+        ]); 
+    }
+    public function brandList(){
+        $brandModel = new Brand();
+        $brands = $brandModel->findAll();
+        $this->show('brand_list', [
+            'brands' => $brands
+        ]); 
+    }
+    public function typeList(){
+        $typeModel = new Type();
+        $types = $typeModel->findAll();
+        $this->show('type_list', [
+            'types' => $types
         ]); 
     }
     

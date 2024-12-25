@@ -38,10 +38,23 @@ $router->addRoutes(array(
         'controller' => MainController::class, // Dans quel controller ?
         'action' => 'explore' // Quelle méthode dans ce controller ?
     ], 'explore'),
-    array('GET','/products', [
+    array('GET','/catalogue/produits', [
         'controller' => MainController::class,
         'action' => 'productList'
     ], 'product_list'),
+    array('GET','/catalogue/categories', [
+        'controller' => MainController::class,
+        'action' => 'categoryList'
+    ], 'category_list'),
+    array('GET','/catalogue/brands', [
+        'controller' => MainController::class,
+        'action' => 'brandList'
+    ], 'brand_list'),
+    array('GET','/catalogue/types', [
+        'controller' => MainController::class,
+        'action' => 'typeList'
+    ], 'type_list'),
+
     // Pas essayé
     array('GET','/mentions-legales', [
         'controller' => MainController::class, // le namespace nom de la classe + le nom de la classe (concatenation) 
@@ -59,7 +72,7 @@ $router->addRoutes(array(
         'controller' => CatalogController::class,
         'action' => 'brand'
     ], 'catalog-brand'),
-    array('GET','/catalogue/product[i:id]', [
+    array('GET','/catalogue/produit/[i:id]', [
         'controller' => CatalogController::class,
         'action' => 'product'
     ], 'catalog-product'),
