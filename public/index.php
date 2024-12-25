@@ -84,6 +84,10 @@ $router->addRoutes(array(
         'controller' => MainController::class,
         'action' => 'addToCart'
     ], 'add-to-cart'),
+    array('GET', '/clear-cart', [
+        'controller' => MainController::class,
+        'action' => 'clearCart'
+    ], 'clear-cart')
     
     
 ));

@@ -124,7 +124,7 @@ class MainController extends CoreController
 
         // Ajoute ou met à jour le produit dans le panier
         if (isset($_SESSION['cart'][$productId])) {
-            $_SESSION['cart'][$productId]['quantity'] += 1; // Si déjà dans le panier, on augmente la quantité
+            $_SESSION['cart'][$productId]['quantity'] += 1; 
         } else {
             $_SESSION['cart'][$productId] = [
                 'name' => $product->getName(),
@@ -139,6 +139,15 @@ class MainController extends CoreController
     header("Location: /order");
     exit();
 }
+
+    public function clearCart()
+    {
+        unset($_SESSION['cart']);
+
+        // Redirection vers la page du panier
+        header("Location: /order");
+        exit();
+    }
 
 
 }
