@@ -1,48 +1,38 @@
 <main class="order-main">
-        <section class="texte">
-            <h3>Récapitulatif de mon panier</h3>
-        </section>
+    <section class="texte">
+        <h3>Récapitulatif de mon panier</h3>
+    </section>
 
-        <section class="recapitulatif">
-            <article class="left box">
+    <section class="recapitulatif">
+        <article class="left box">
+            <?php foreach ($_SESSION['cart'] as $productId => $product) : ?>
+                <?php $total += ($product['price']) * $product['quantity']?>
                 <section class="article-panier">
-                    <img src="../assets/images/woman-playing-volleyball-beach.jpg" alt="">
+                    <img src="<?= $baseRoute . '/' . $product['picture'] ?>" alt="produit">
                     <section>
-                        <h3>Huile d'argan - Huile végétale BIO</h3>
-                        <p>Contenance - 50 mL</p>
-                        <p>5,95€</p>
+                        <h3><?= $product['name'] ?></h3>
+                        <p><?= $product['quantity'] ?> x <?= ($product['price'])?>€</p>
                     </section>
-                    <h3>5,95€</h3>
-                    <img src="../assets/images/localisation.svg" alt="">
+                    <h3><?= ($product['price'] * $product['quantity'])?>€</h3>
                 </section>
+            <?php endforeach ?>
+        </article>
 
-                <section class="article-panier">
-                    <img src="../assets/images/woman-playing-volleyball-beach.jpg" alt="">
-                    <section>
-                        <h3>PC</h3>
-                        <p>Contenance - 50 mL</p>
-                        <p>502,95€</p>
-                    </section>
-                    <h3>502,95€</h3>
-                    <img src="../assets/images/localisation.svg" alt="">
-                </section>
-
-            </article>
-            <article class="right box">
-                <section>
-                    <article>
-                        <p>Produits</p>
-                        <p>11,90€</p>
-                    </article>
-                    <article>
-                        <p>Livraison</p>
-                        <p>4,30€</p>
-                    </article>
-                    <article class="total">
-                        <p class="total-text">Total</p>
-                        <p>30,30€</p>
-                    </article>
-                </section>
-            </article>
-        </section>
-    </main>
+        <article class="right box">
+            <section>
+                <article>
+                    <p>Produits</p>
+                    <p><?= $total ?>€</p>
+                </article>
+                <article>
+                    <p>Livraison</p>
+                    <p>4,30€</p>
+                </article>
+                <article class="total">
+                    <p class="total-text">Total</p>
+                    <p><?= $total + 4.30 ?>€</p>
+                </article>
+            </section>
+        </article>
+    </section>
+</main>

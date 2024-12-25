@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 // Ici j'inclus le fichier autoload.php car c'est grâce à ce fichier que je vais pouvoir inclure TOUTES mes dépendances composer (donc ce qu'il y a dans le dossier vendor)
 require_once __DIR__ . "/../vendor/autoload.php";
@@ -55,7 +56,6 @@ $router->addRoutes(array(
         'action' => 'typeList'
     ], 'type_list'),
 
-    // Pas essayé
     array('GET','/mentions-legales', [
         'controller' => MainController::class, // le namespace nom de la classe + le nom de la classe (concatenation) 
         'action' => 'legalMentions'
@@ -79,7 +79,13 @@ $router->addRoutes(array(
     array('GET','/test', [
         'controller' => MainController::class,
         'action' => 'test'
-    ])
+    ]),
+    array('GET', '/add-to-cart/[i:id]', [
+        'controller' => MainController::class,
+        'action' => 'addToCart'
+    ], 'add-to-cart'),
+    
+    
 ));
 
 // Ici on check si la route sur laquelle on est a bien été mappé

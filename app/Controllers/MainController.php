@@ -1,6 +1,6 @@
 <?php
-
 namespace App\Controllers;
+session_start();
 
 use App\Models\Brand;
 use App\Models\Category;
@@ -58,11 +58,24 @@ class MainController extends CoreController
         // Affiche la vue dans le dossier views
         $this->show('explore');
     }
+    
     public function order()
     {
-        // Affiche la vue dans le dossier views
-        $this->show('order');
+        // On récupère le panier de la session
+        $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
+
+        // Calcul du total
+        $total = 0;
+        foreach ($cart as $item) {
+            $total += $item['price'] * $item['quantity'];
+        }
+
+        $this->show('order', [
+            'cart' => $cart,
+            'total' => $total
+        ]);
     }
+
     
     public function productList(){
         $productModel = new Product();
@@ -93,4 +106,39 @@ class MainController extends CoreController
         ]); 
     }
     
+    public function addToCart($params)
+{
+    // Récupère l'ID du produit depuis les paramètres
+    $productId = $params['id'];
+
+    // On récupère le produit depuis le modèle Product
+    $productModel = new Product();
+    $product = $productModel->find($productId);
+
+    // Si le produit existe
+    if ($product) {
+        // Si le panier n'existe pas encore, on le crée
+        if (!isset($_SESSION['cart'])) {
+            $_SESSION['cart'] = [];
+        }
+
+        // Ajoute ou met à jour le produit dans le panier
+        if (isset($_SESSION['cart'][$productId])) {
+            $_SESSION['cart'][$productId]['quantity'] += 1; // Si déjà dans le panier, on augmente la quantité
+        } else {
+            $_SESSION['cart'][$productId] = [
+                'name' => $product->getName(),
+                'price' => $product->getPrice(),
+                'quantity' => 1,
+                'picture' => $product->getPicture()
+            ];
+        }
+    }
+
+    // Redirection vers la page du panier
+    header("Location: /order");
+    exit();
+}
+
+
 }
